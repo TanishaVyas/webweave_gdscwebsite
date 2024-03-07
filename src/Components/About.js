@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Grid, Paper, useMediaQuery, useTheme } from "@mui/material";
 import Lottie from "lottie-react";
-import anime101 from "../Animation/try010101010.json";
+import anime101 from "../Animation/programmer.json";
 
 const About = () => {
   const theme = useTheme();
@@ -48,23 +48,15 @@ const About = () => {
               >
                 Google Developer Student Club
               </h2>
-              <p
-                style={{
-                  margin: "0",
-                  fontSize: "1.5em",
-                  maxWidth: "50vw",
-                }}
-              >
-                <b>Symbiosis Institute of Technology, Pune</b>
-              </p>
+
               <p style={{ fontSize: "1.2em" }}>
-                At GDSC SIT, we’re passionate about empowering university
-                students with cutting-edge skills in various domains. Our
-                mission is to foster a vibrant community of tech enthusiasts who
-                explore, innovate, and collaborate. Whether you’re a novice or
-                an advanced developer, there’s a place for you here. Join us at
-                DSC SIT, where curiosity meets code, and innovation knows no
-                bounds!
+                Google Developer Student Clubs are university based community
+                groups for students interested in Google developer technologies.
+                Students from all undergraduate or graduate programs with an
+                interest in growing as a developer are welcome. By joining a
+                GDSC, students grow their knowledge in a peer-to-peer learning
+                environment and build solutions for local businesses and their
+                community.
               </p>
             </Paper>
           </Grid>

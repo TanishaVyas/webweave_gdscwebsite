@@ -5,7 +5,6 @@ import Team from "./Components/Team";
 import Footer from "./Components/Footer";
 import Events from "./Components/Events";
 import ScrollToTopButton from "./Components/ScrollToTopButton";
-import CirclePlaceholders from "./Components/CirclePlaceholders";
 import Hero from "./Components/Hero";
 
 function App() {

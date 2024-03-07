@@ -1,4 +1,8 @@
 import React from "react";
+import event1 from "../Images/eventpic/game dev img.jpg";
+import event2 from "../Images/eventpic/flutterWorkshop.jpg";
+import event3 from "../Images/eventpic/gamedev2.png";
+import event4 from "../Images/eventpic/event4.png";
 
 const Events = () => {
   const containerStyle = {
@@ -8,13 +12,12 @@ const Events = () => {
   };
 
   const headerStyle = {
-    backgroundColor: "#333",
-    color: "#fff",
+    color: "#000",
     textAlign: "center",
     justifyContent: "center",
     padding: "20px",
     fontSize: "24px",
-    width: "80%", // Adjust the width as per your preference
+    width: "80%",
     left: "50%",
     transform: "translateX(10%)",
     borderRadius: "25px",
@@ -89,29 +92,54 @@ const Events = () => {
       id: 1,
       title: "Introduction to Game Development",
       description:
-        "The workshop aims to provide participants with hands-on experience in using various tools and techniques related to game development. The tools covered in the workshop will include Pygame, Piskell, and SFXR. The workshop is designed to introduce participants to the basics of game development, allowing them to create simple games, design sprites, and generate 8-bit audio.",
-      imageSrc: "https://placekitten.com/300/300?image=1",
+        "The dynamic workshop, was unfolded with the goal of immersing participants in the exhilarating realm of game creation. This session aimed to equip attendees with hands-on experience using prominent game development tools like Pygame, Piskell, and SFXR.",
+      imageSrc: event1,
       link: "https://gdsc.community.dev/events/details/developer-student-clubs-symbiosis-institute-of-technology-pune-presents-introduction-to-game-development/",
+      date: "19th August, 2023", // Add the event date
+      organizer: "Yash Parkhi",
     },
     {
       id: 2,
-      title: "Event 2",
-      description: "Description for Event 2",
-      imageSrc: "https://placekitten.com/300/300?image=2",
-      link: "https://example.com/event2",
+      title: "Flutter Workshop",
+      description:
+        "TThe Flutter Workshop event proved to be a resounding success, offering participants an enriching experience delving into the realm of Flutter – a widely-used open-source UI software development toolkit developed by Google.",
+      imageSrc: event2,
+      link: "https://gdsc.community.dev/events/details/developer-student-clubs-symbiosis-institute-of-technology-pune-presents-introduction-to-gdsc-sit-chapter-and-flutter-workshop/",
+      date: "11th August, 2023", // Add the event date
+      organizer: "Sumedh Dhongre and Dev Bhanushali",
     },
-    // Add more events as needed
+
+    {
+      id: 3,
+      title: "Intro to Game Dev",
+      description:
+        "GDSC Game Dev orchestrated an impactful workshop titled 'Customizing the Dino Game with Pygame, Sfxr, and Piskel.' This event aimed to immerse participants in the world of game development using Python, exploring the intricacies of Pygame, Sfxr for sound effects, and Piskel for asset customization.",
+      imageSrc: event3,
+      link: "https://gdsc.community.dev/events/details/developer-student-clubs-symbiosis-institute-of-technology-pune-presents-game-dev-session/",
+      date: "9th September, 2023",
+      organizer: "Yash Parkhi",
+    },
+    {
+      id: 4,
+      title: "Intro to Open-Source",
+      description:
+        "The Open-Source Workshop, a collaborative effort by the Symbiosis Open-Source Society and Google Developer Student Clubs (GDSC), aimed to champion open-source software development and equip participants with essential knowledge and skills in this field. ",
+      imageSrc: event4,
+      link: "https://gdsc.community.dev/events/details/developer-student-clubs-symbiosis-institute-of-technology-pune-presents-game-dev-session/",
+      date: "6th October, 2023",
+      organizer: "Yajushreshtha Shukla and Ishaan Siddiqui",
+    },
   ];
 
   const mediaQuerySmall = "@media (max-width: 768px)";
   const mediaQueryMedium = "@media (min-width: 769px) and (max-width: 1200px)";
 
   const responsiveCardStyleSmall = {
-    width: "calc(60% - 16px)", // Adjusted width for smaller screens
+    width: "calc(60% - 16px)",
   };
 
   const responsiveCardStyleMedium = {
-    width: "calc(33.33% - 32px)", // Adjusted width for medium screens, considering gap
+    width: "calc(33.33% - 32px)",
   };
   return (
     <div style={{ backgroundColor: "#4285F4" }}>
@@ -137,6 +165,7 @@ const Events = () => {
             >
               <a href={event.link} target="_blank" rel="noopener noreferrer">
                 <div style={knowMoreButtonStyle}>Know More</div>
+                <br />
                 <div>
                   <img
                     src={event.imageSrc}
@@ -148,7 +177,14 @@ const Events = () => {
               <div>
                 <b style={titleStyle}>{event.title}</b>
               </div>
+
               <div style={descriptionStyle}>{event.description}</div>
+              <div style={{ fontSize: "12px", marginTop: "8px" }}>
+                <strong>Date:</strong> {event.date}
+              </div>
+              <div style={{ fontSize: "12px", marginTop: "4px" }}>
+                <strong>Organized by:</strong> {event.organizer}
+              </div>
             </div>
           ))}
         </div>

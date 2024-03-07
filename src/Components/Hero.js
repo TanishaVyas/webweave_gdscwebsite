@@ -2,10 +2,7 @@ import React from "react";
 import { styled, useTheme, useMediaQuery } from "@mui/system";
 import { Container, Grid, Paper, Typography } from "@mui/material";
 import Lottie from "lottie-react";
-import anmetry from "../Animation/Animation - 1709816693647.json";
 import About from "./About";
-import back from "../Images/Untitled design (2).png";
-import anime from "../Animation/Animation - 1709703315198.json";
 import trydie from "../Animation/Animation-trydie.json";
 
 const HeroContainer = styled("div")({
@@ -15,36 +12,6 @@ const HeroContainer = styled("div")({
   width: "100vw",
   height: "100vh",
   position: "relative", // Add this line
-});
-
-const ContentContainer = styled("div")({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  textAlign: "center",
-  position: "relative",
-  zIndex: 1,
-  color: "white", // Add this line to ensure text is visible on top of the animation
-});
-
-const lottieOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: anime,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
-
-const BackgroundLottie = styled(Lottie)({
-  position: "absolute",
-  top: 0,
-  left: 0,
-  zIndex: 0,
-  height: "100%",
-  width: "100%",
-  backgroundColor: "#9BEAF0",
 });
 
 const Hero = () => {
@@ -58,41 +25,22 @@ const Hero = () => {
       }}
     >
       <HeroContainer>
-        {/* 
-        <BackgroundLottie
-          animationData={anime}
-          options={lottieOptions}
-          loop={true}
-          autoplay={true}
-        />
-        */}
         <Lottie
           animationData={trydie}
           style={{
-            width: isSmScreen ? "100%" : "100%",
+            width: isSmScreen ? "200%" : "100%",
             height: isSmScreen ? "auto" : "auto",
             position: "absolute",
-            top: "50%",
+            top: isSmScreen ? 400 : -25,
             left: "50%",
-            transform: "translate(-50%, -50%)",
+            transform: isSmScreen
+              ? "translate(-70%, -50%)"
+              : "translate(-50%, -15%)",
           }}
           loop={true}
           autoplay={true}
         />
-        {/*
-        <Lottie
-          animationData={anmetry}
-          style={{
-            width: isSmScreen ? "50vw" : "25vw", // Adjust the width based on screen size
-            height: isSmScreen ? "50vw" : "25vw", // Adjust the height based on screen size
-            position: "absolute",
-            top: isSmScreen ? -50 : -25, // Adjust the top position based on screen size
-            left: isSmScreen ? -25 : -50, // Adjust the left position based on screen size
-          }}
-          loop={true}
-          autoplay={true}
-        />
-*/}
+
         <Container>
           <Grid container spacing={2}>
             {/* Grid item for basic info text */}
@@ -104,9 +52,10 @@ const Hero = () => {
                   padding: 0,
                   margin: 0,
                   textAlign: "center",
-                  position: "relative", // Add this line
-                  zIndex: 1, // Keep this line for text visibility
-                  color: "#000000", // Adjust the text color to ensure visibility
+                  position: "relative",
+                  zIndex: 1,
+                  color: "#000000",
+                  marginTop: "-100px",
                 }}
                 elevation={0}
               >
@@ -125,7 +74,6 @@ const Hero = () => {
                   <span>lub</span>
                 </Typography>
 
-                {/* Subtitle */}
                 <Typography
                   variant="body1"
                   style={{

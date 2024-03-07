@@ -11,6 +11,7 @@ const FooterContainer = styled("footer")({
   marginTop: "auto",
   elevation: 4,
   padding: "20px",
+  boxShadow: "0px -5px 15px rgba(0, 0, 0, 0.5)",
 });
 
 const LogoContainer = styled("div")({
