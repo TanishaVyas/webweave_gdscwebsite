@@ -20,7 +20,6 @@ const gdscMenuItems = [
   { to: "/", text: "Home" },
   { to: "/events", text: "Events" },
   { to: "/team", text: "Team" },
-  { to: "/contact", text: "Contact" },
 ];
 
 function GDSCNavbar() {
