@@ -1,0 +1,50 @@
+.app {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .text-container.reduce-and-move {
+    transition: all 1s ease-in-out; /* Adjust the duration and easing as needed */
+    transform: scale(0.5) translateX(-50%);
+  }
+  
+  
+  .text-container {
+    text-align: center;
+  }
+  
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  .static-text {
+    font-weight: bold; /* Adjust the styling of the static text as needed */
+  }
+  
+  .dynamic-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: appear 0.5s forwards;
+    margin: 0 5px; /* Adjust the spacing between words */
+  }
+  
+  @keyframes appear {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
